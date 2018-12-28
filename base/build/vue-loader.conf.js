@@ -7,7 +7,6 @@ const sourceMapEnabled = isProduction
   : config.dev.cssSourceMap
 
 module.exports = {
-  postcss:[require('postcss-px2rem')({'remUnit':75,'baseDpr':2})],
   loaders: utils.cssLoaders({
     sourceMap: sourceMapEnabled,
     extract: isProduction

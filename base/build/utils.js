@@ -28,11 +28,11 @@ exports.cssLoaders = function (options) {
       sourceMap: options.sourceMap
     }
   }
-
-  var px2remLoader = {
+  
+  const px2remLoader = {
     loader: 'px2rem-loader',
     options: {
-      remUnit: 75     // (这里是指设计稿的宽度为 750 / 10)
+      remUnit: 75
     }
   }
   // generate loader string to be used with extract text plugin

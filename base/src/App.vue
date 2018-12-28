@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <!-- <img src="./assets/logo.png"> -->
+    <!-- <img src="./assets/logo.png">
+    <router-view/> -->
     <div></div>
-    <!-- <router-view/> -->
   </div>
 </template>
 
@@ -12,16 +12,13 @@ export default {
 }
 </script>
 
-<style lang='less'>
+<style lang="less">
 @import url('../static/css/style.less');
-// @import "~@cs/style";
-#app{
-  width:100%;
-  height:100vh;
+#app {
   div{
     width:100%;
     height:300px;
-    background: orange;
+    background:orange;
   }
 }
 </style>
