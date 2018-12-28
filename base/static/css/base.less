@@ -1,0 +1,173 @@
+/**
+ * 用于简化输入的混合
+ * position
+ * display
+ * overflow
+ * float
+ * margin
+ * padding
+ * border
+ * radius
+ * width
+ * height
+ * line-height
+ * background
+ * text
+ * font
+ * color
+ * ellipsis
+ */
+
+/* position */
+.pa () { position: absolute }
+.pr () { position: relative }
+.pf () { position: fixed }
+.top (@v) when (isnumber(@v)) { top: unit(@v, rem)}
+.top (@v) when (ispercentage(@v)) { top: @v }
+.bottom (@v) when (isnumber(@v)) { bottom: unit(@v, rem)}
+.bottom (@v) when (ispercentage(@v)) { bottom: @v }
+.left (@v) when (isnumber(@v)) { left: unit(@v, rem)}
+.left (@v) when (ispercentage(@v)) { left: @v }
+.right (@v) when (isnumber(@v)) { right: unit(@v, rem)}
+.right (@v) when (ispercentage(@v)) { right: @v }
+
+
+/* display */
+.dn () { display: none }
+.db () { display: block }
+.di () { display: inline}
+
+/* overflow */
+.oh () { overflow: hidden }
+.os () { overflow: scroll }
+.oxs () { overflow-x: scroll }
+.oys () { overflow-y: scroll }
+
+/* float */
+.fl () { float: left }
+.fr () { float: right }
+
+/* margin */
+.ma () {margin: 0 auto}
+.m (@v) when (isnumber(@v)) { margin: unit(@v, rem) }
+.m (@v) when (ispercentage(@v)) { margin: @v }
+.mt (@v) when (isnumber(@v)) { margin-top: unit(@v, rem) }
+.mt (@v) when (ispercentage(@v)) { margin-top: @v }
+.mr (@v) when (isnumber(@v)) { margin-right: unit(@v, rem) }
+.mr (@v) when (ispercentage(@v)) { margin-right: @v }
+.mb (@v) when (isnumber(@v)) { margin-bottom: unit(@v, rem) }
+.mb (@v) when (ispercentage(@v)) { margin-bottom: @v }
+.ml (@v) when (isnumber(@v)) { margin-left: unit(@v, rem) }
+.ml (@v) when (ispercentage(@v)) { margin-left: @v }
+.mtb (@v) when (isnumber(@v)) { margin-top: unit(@v, rem);  margin-bottom: unit(@v, rem) }
+.mtb (@v) when (ispercentage(@v)) { margin-top: @v;  margin-bottom: @v }
+.mlr (@v) when (isnumber(@v)) { margin-left: unit(@v, rem);  margin-right: unit(@v, rem) }
+.mlr (@v) when (ispercentage(@v)) { margin-left: @v;  margin-right: @v }
+
+/* padding */
+.p (@v) when (isnumber(@v)) { padding: unit(@v, rem) }
+.p (@v) when (ispercentage(@v)) { padding: @v }
+.pt (@v) when (isnumber(@v)) { padding-top: unit(@v, rem) }
+.pt (@v) when (ispercentage(@v)) { padding-top: @v }
+.pr (@v) when (isnumber(@v)) { padding-right: unit(@v, rem) }
+.pr (@v) when (ispercentage(@v)) { padding-right: @v }
+.pb (@v) when (isnumber(@v)) { padding-bottom: unit(@v, rem) }
+.pb (@v) when (ispercentage(@v)) { padding-bottom: @v }
+.pl (@v) when (isnumber(@v)) { padding-left: unit(@v, rem) }
+.pl (@v) when (ispercentage(@v)) { padding-left: @v }
+.ptb (@v) when (isnumber(@v)) { padding-top: unit(@v, rem);  padding-bottom: unit(@v, rem) }
+.ptb (@v) when (ispercentage(@v)) { padding-top: @v;  padding-bottom: @v }
+.plr (@v) when (isnumber(@v)) { padding-left: unit(@v, rem);  padding-right: unit(@v, rem) }
+.plr (@v) when (ispercentage(@v)) { padding-left: @v;  padding-right: @v }
+
+/* border */
+.bn () { border: none }
+.btn () { border-top: none; }
+.bbn () { border-bottom: none }
+.bln () { border-left: none }
+.brn () { border-right: none }
+.btbn () { border-top: none; border-bottom: none; }
+.blrn () { border-left: none; border-right: none; }
+.bsol (@color; @width: 1) { border: solid unit(@width, rem) @color }
+.bdot (@color; @width: 1) { border: dotted unit(@width, rem) @color }
+.bdas (@color; @width: 1) { border: dashed unit(@width, rem) @color }
+.btsol (@color; @width: 1) { border-top: solid unit(@width, rem) @color }
+.bbsol (@color; @width: 1) { border-bottom: solid unit(@width, rem) @color }
+.blsol (@color; @width: 1) { border-left: solid unit(@width, rem) @color }
+.brsol (@color; @width: 1) { border-right: solid unit(@width, rem) @color }
+.btbsol (@color; @width: 1) { border-top: solid unit(@width, rem) @color; border-bottom: solid unit(@width, rem) @color }
+.blrsol (@color; @width: 1) { border-left: solid unit(@width, rem) @color; border-right: solid unit(@width, rem) @color }
+.btdot (@color; @width: 1) { border-top: dotted unit(@width, rem) @color }
+.bbdot (@color; @width: 1) { border-bottom: dotted unit(@width, rem) @color }
+.bldot (@color; @width: 1) { border-left: dotted unit(@width, rem) @color }
+.brdot (@color; @width: 1) { border-right: dotted unit(@width, rem) @color }
+.btbdot (@color; @width: 1) { border-top: dotted unit(@width, rem) @color; border-bottom: dotted unit(@width, rem) @color }
+.blrdot (@color; @width: 1) { border-left: dotted unit(@width, rem) @color; border-right: dotted unit(@width, rem) @color }
+.btdas (@color; @width: 1) { border-top: dashed unit(@width, rem) @color }
+.bbdas (@color; @width: 1) { border-bottom: dashed unit(@width, rem) @color }
+.bldas (@color; @width: 1) { border-left: dashed unit(@width, rem) @color }
+.brdas (@color; @width: 1) { border-right: dashed unit(@width, rem) @color }
+.btbdas (@color; @width: 1) { border-top: dashed unit(@width, rem) @color; border-bottom: dashed unit(@width, rem) @color }
+.blrdas (@color; @width: 1) { border-left: dashed unit(@width, rem) @color; border-right: dashed unit(@width, rem) @color }
+
+/* radius */
+.r (@v) { border-radius: unit(@v, rem) }
+
+/* width */
+.w (@v) when (isnumber(@v)) { width: unit(@v, rem) }
+.w (@v) when (ispercentage(@v)) { width: @v }
+
+/* height */
+.h (@v) when (isnumber(@v)) { height: unit(@v, rem) }
+.h (@v) when (ispercentage(@v)) { height: @v }
+
+/* line-height */
+.lh (@v) when (isnumber(@v)) { line-height: unit(@v, rem) }
+.lh (@v) when (ispercentage(@v)) { line-height: @v }
+
+/* background */
+.bk (@v) when (iscolor(@v)) { background: @v }
+.bk (@v @rest) { background: url(@v) @rest }
+.bs (@v) { -moz-background-size: @v; background-size: @v }
+
+/* text */
+.t (@v) { text: @v }
+.tl () { text-align: left }
+.tr () { text-align: right }
+.tc () { text-align: center }
+.td (@v) { text-decoration: @v }
+.ti (@v) { text-indent: @v }
+/* font */
+.f (@v) { font: @v }
+.ff (@v) { font-family: @v }
+.fs (@v) when (isnumber(@v)) { font-size: unit(@v, rem) }
+.fs (@v) when (isem(@v)) { font-size: @v }
+.fs (@v) when (isunit(@v, "rem")) { font-size: @v }
+.fw (@v) { font-weight: @v }
+
+/* color */
+.c (@v) { color: @v }
+
+/* ellipsis */
+.e () {
+	white-space:nowrap;
+	text-overflow:ellipsis; 
+	-o-text-overflow:ellipsis;
+ 	overflow:hidden;
+}
+
+/* clear */
+.clear() { 
+	clear: both; 
+	zoom:100%;
+	&::after{content:".";display:block;height:0;clear:both;visibility:hidden}
+}
+//限制文字行数，超出隐藏
+.line-clamp(@num){
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space: normal;
+	display:-webkit-box;
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:@num;/*规定最多显示两行*/
+  }
