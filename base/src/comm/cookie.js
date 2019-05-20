@@ -1,5 +1,5 @@
 // 对cookie的设置
-export const setCookie = function(key,val,day){
+export const setCookie = function(key,val,day){// 过期时间默认为一天
     var exp = new Date();
     if(day){
         exp.setTime(exp.getTime()+24*60*60*1000*day)

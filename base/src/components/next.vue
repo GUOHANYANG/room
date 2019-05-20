@@ -15,13 +15,13 @@ export default {
     created(){
         var _this =this
         console.log(this.$store.state.userInfo)
-        bus.$on('getMsg',(val)=>{
+        bus.$on('getMsg',(val)=>{ // 监听注册的eventBus事件
             console.log(val)
             this.msg = val
         })
     },
     destroyed(){
-        bus.$off('getMsg')
+        bus.$off('getMsg')// 必须在页面销毁时删除该bus监听
     },
     computed:{
         name(){

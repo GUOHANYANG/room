@@ -41,13 +41,15 @@ export default {
     setCookie('name','www')
   },
   beforeDestroy(){
-    bus.$emit('getMsg',this.msg)
+    bus.$emit('getMsg',this.msg)// eventBus组件间的一种传值方案，一般不用
   },
   methods:{
     login(){
       console.log(this.user)
+      // 将获取到的用户信息存入vuex中
       this.$store.commit('keepUserInfo',this.user)
       console.log(this.$store.state.userInfo)
+      // 存入sessionStorage中
       sessionStorage.setItem('userInfo',JSON.stringify(this.user))
       
       this.$router.push('/next')
